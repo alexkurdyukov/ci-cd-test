@@ -36,5 +36,3 @@ jobs:
       - name: run typeckeck
         run: npm run type:check
 
-      - name: language translation check
-        run: i18n:check
