@@ -1,6 +1,11 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+name: Premerge check
+run-name: ${{ github.actor }} run premerge check
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches: [master]
 jobs:
   init:
     runs-on: ubuntu-latest
@@ -35,4 +40,3 @@ jobs:
 
       - name: run typeckeck
         run: npm run type:check
-
